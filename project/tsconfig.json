@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "ES5",
+        "outDir": "./dist",
+        "moduleResolution": "node",
+        "lib": ["ES2015", "DOM", "DOM.Iterable"],
+        "noImplicitAny": true,
+        "typeRoots": ["./node_modules/@types", "types"],
+        "strict": true
+    },
+    "include": ["./src/**/*"]
+}
+
+
+// npm 초기화
+// npm init
+
+// 타입스크립트의 라이브러리 설치
+// npm install -i typescript --save-dev
+
+// npm install 시 옵션을 주지않으면 package.json dependences에 들어가게 된다. 
+// 여기서 옵션은 npm install -i -D 이런것들
+
+// promise 작성하기위해 인식해주기 위해서 node넣어줌
+// include는 project폴더안에서 어떤 파일을 타입스크립트를 컴파일할 것인가 
+    // src폴더 아래있는 애들만 타입스크립트 컴파일 하겠다 의미
+
+
+// allowJs를 허용해주면서 타입스크립트로 자바스크립트 어떤 타입을 변경하려고할 때 
+// 자바스크립트 파일이 너무 많다면, 모든 js파일을 ts로 변경할 필요가 없다 
+// 점진적으로 타입스크립트로 변환할 때 장점이다.
+
+
+// compile options 추가방법 
+// tsPromise' constructor or include 'ES2015' in your '--lib' option
+// lib 라이브러리에 추가해줌
+
+
+
+// noimplicityAny:true를 해주면서 너가 타입에대해서 잘 모르면 any라도 집어넣어야 하나든 옵션
+// Parameter 'selector' implicitly has an 'any' type
+
+
+// npm uninstall libray 하게되면, package json file에 있는 dependencies에서 지울 수 있다.
+
+// Devdependencie와 dependencies의 차이는 라이브러리 목록과 속성 버전을 관ㄹ리하는 것인데 이 둘의 차이는
+// dependecies는 애플리케이션의 직접적으로 관리하는 jquery, chart react view 
+// devdependencies는 개발할 때만 사용되고 build할 때 내보낼 때는 dependencies에 있는 내용갖고 배포하면된다. 
+// dependencies는 배포할 때 사용 Devdependencies는 개발용
+
+
+
+// typeroots --> 이용해서 기본적으로 따로 설정하지 않는 이상 node modules 밑에있는 types @types을 전부 뒤져서 index.d.ts를 들고온다는 의미 
+// 만약에 커뮤니티에서 @types를 지원하지않을 때 직접 정의를해야할 때 typeroot이다.
+
+
+
+//"strict": true를 주게되면 strict 옵션을 가진 애들은 모두 true를 가지게 된다.
+// 
